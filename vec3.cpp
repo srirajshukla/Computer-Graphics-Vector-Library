@@ -30,6 +30,11 @@ Vec3<T>& Vec3<T>::normalize() {
     return *this;
 }
 
+template<class T>
+T Vec3<T>::dot(const Vec3<T> &v) {
+    return x*v.x + y*v.y + z*v.z;
+}
+
 // utility functions
 template<typename T>
 T length(const Vec3<T> &v){
