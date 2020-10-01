@@ -20,9 +20,8 @@ public:
     T x, y, z;
 
     T length();
-
     Vec3<T> &normalize();
-
+    T dot (const Vec3<T> &v);
 };
 
 template<typename T>
@@ -30,6 +29,12 @@ T length(const Vec3<T> &v);
 
 template<typename T>
 void normalize(Vec3<T> &v);
+
+template<typename T>
+T dot(const Vec3<T> &a, const Vec3<T> &b){
+    return a.x * b.x + a.y * b.y + a.z * b.z;
+}
+
 
 typedef Vec3<float> Vec3f;
 
